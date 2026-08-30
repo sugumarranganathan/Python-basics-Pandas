@@ -1,0 +1,16 @@
+25. Sampling
+
+| Method             | Use               | Example               |
+| ------------------ | ----------------- | --------------------- |
+| `sample()`         | Random rows       | `df.sample(10)`       |
+| `sample(frac=...)` | Random percentage | `df.sample(frac=0.2)` |
+
+==
+
+Example:
+
+df.sample(frac=0.1)
+
+means:
+
+Randomly select 10% of the rows.
