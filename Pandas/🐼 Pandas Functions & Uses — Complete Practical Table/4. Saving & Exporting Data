@@ -1,0 +1,13 @@
+4. Saving / Exporting Data
+
+| Method         | Use                              | Example                          |
+| -------------- | -------------------------------- | -------------------------------- |
+| `to_csv()`     | Save as CSV                      | `df.to_csv("output.csv")`        |
+| `to_excel()`   | Save as Excel                    | `df.to_excel("output.xlsx")`     |
+| `to_json()`    | Save as JSON                     | `df.to_json("output.json")`      |
+| `to_sql()`     | Save to SQL database             | `df.to_sql("table", connection)` |
+| `to_parquet()` | Save as Parquet                  | `df.to_parquet("data.parquet")`  |
+| `to_pickle()`  | Save as Pickle                   | `df.to_pickle("data.pkl")`       |
+| `to_html()`    | Convert to HTML table            | `df.to_html()`                   |
+| `to_dict()`    | Convert to dictionary            | `df.to_dict()`                   |
+| `to_numpy()`   | Convert DataFrame to NumPy array | `df.to_numpy()`                  |
