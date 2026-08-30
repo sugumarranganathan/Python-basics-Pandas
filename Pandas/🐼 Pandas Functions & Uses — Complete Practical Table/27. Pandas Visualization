@@ -1,0 +1,14 @@
+27. Pandas Visualization
+
+Pandas can also create simple plots using Matplotlib underneath.
+
+| Method           | Use            | Example                                |
+| ---------------- | -------------- | -------------------------------------- |
+| `plot()`         | Line plot      | `df.plot()`                            |
+| `plot.bar()`     | Bar chart      | `df.plot.bar()`                        |
+| `plot.barh()`    | Horizontal bar | `df.plot.barh()`                       |
+| `plot.hist()`    | Histogram      | `df["Age"].plot.hist()`                |
+| `plot.box()`     | Box plot       | `df["Salary"].plot.box()`              |
+| `plot.scatter()` | Scatter plot   | `df.plot.scatter(x="Age", y="Salary")` |
+| `plot.pie()`     | Pie chart      | `df["Sales"].plot.pie()`               |
+
