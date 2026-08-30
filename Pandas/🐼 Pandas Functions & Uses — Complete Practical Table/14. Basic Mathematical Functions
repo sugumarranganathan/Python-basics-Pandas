@@ -1,0 +1,22 @@
+14. Basic Mathematical Functions
+
+| Method       | Use                           | Example                   |
+| ------------ | ----------------------------- | ------------------------- |
+| `sum()`      | Sum                           | `df["Salary"].sum()`      |
+| `mean()`     | Average                       | `df["Salary"].mean()`     |
+| `median()`   | Middle value                  | `df["Salary"].median()`   |
+| `mode()`     | Most frequent value           | `df["Age"].mode()`        |
+| `min()`      | Minimum                       | `df["Age"].min()`         |
+| `max()`      | Maximum                       | `df["Age"].max()`         |
+| `std()`      | Standard deviation            | `df["Salary"].std()`      |
+| `var()`      | Variance                      | `df["Salary"].var()`      |
+| `count()`    | Count non-missing values      | `df["Age"].count()`       |
+| `abs()`      | Absolute values               | `df["Profit"].abs()`      |
+| `round()`    | Round numbers                 | `df["Salary"].round(2)`   |
+| `prod()`     | Product                       | `df["Value"].prod()`      |
+| `quantile()` | Calculate percentile/quantile | `df["Age"].quantile(0.5)` |
+| `cumsum()`   | Cumulative sum                | `df["Sales"].cumsum()`    |
+| `cumprod()`  | Cumulative product            | `df["Value"].cumprod()`   |
+| `cummax()`   | Cumulative maximum            | `df["Sales"].cummax()`    |
+| `cummin()`   | Cumulative minimum            | `df["Sales"].cummin()`    |
+
