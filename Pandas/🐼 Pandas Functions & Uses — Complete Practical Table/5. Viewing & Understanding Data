@@ -17,3 +17,20 @@
 | `empty`          | Check whether DataFrame is empty | `df.empty`          |
 
 
+====
+
+Example
+df.head()
+
+shows the first 5 rows.
+
+df.shape
+
+might return:
+
+(1000, 5)
+
+Meaning:
+
+1000 rows
+5 columns
