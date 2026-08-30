@@ -1,0 +1,12 @@
+22. Statistical Relationships
+
+| Method         | Use                     | Example                      |
+| -------------- | ----------------------- | ---------------------------- |
+| `corr()`       | Correlation             | `df.corr(numeric_only=True)` |
+| `cov()`        | Covariance              | `df.cov(numeric_only=True)`  |
+| `rank()`       | Rank values             | `df["Salary"].rank()`        |
+| `pct_change()` | Percentage change       | `df["Sales"].pct_change()`   |
+| `diff()`       | Difference between rows | `df["Sales"].diff()`         |
+
+
+These are particularly useful for Data Science and time-series analysis.
