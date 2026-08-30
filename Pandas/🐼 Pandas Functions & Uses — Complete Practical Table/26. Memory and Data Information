@@ -1,0 +1,11 @@
+26. Memory and Data Information
+
+| Method / Attribute | Use                |
+| ------------------ | ------------------ |
+| `info()`           | Dataset structure  |
+| `memory_usage()`   | Memory consumption |
+| `dtypes`           | Data types         |
+| `shape`            | Rows and columns   |
+| `size`             | Total elements     |
+| `ndim`             | Dimensions         |
+
