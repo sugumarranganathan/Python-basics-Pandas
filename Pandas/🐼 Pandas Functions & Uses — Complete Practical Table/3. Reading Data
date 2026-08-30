@@ -1,0 +1,13 @@
+3. Reading Data
+
+These are very important in real projects.
+
+| Function            | Use                          | Example                           |
+| ------------------- | ---------------------------- | --------------------------------- |
+| `pd.read_csv()`     | Read CSV file                | `pd.read_csv("data.csv")`         |
+| `pd.read_excel()`   | Read Excel file              | `pd.read_excel("data.xlsx")`      |
+| `pd.read_json()`    | Read JSON                    | `pd.read_json("data.json")`       |
+| `pd.read_sql()`     | Read SQL query/database data | `pd.read_sql(query, connection)`  |
+| `pd.read_html()`    | Read HTML tables             | `pd.read_html(url)`               |
+| `pd.read_parquet()` | Read Parquet file            | `pd.read_parquet("data.parquet")` |
+| `pd.read_pickle()`  | Read Pickle file             | `pd.read_pickle("data.pkl")`      |
