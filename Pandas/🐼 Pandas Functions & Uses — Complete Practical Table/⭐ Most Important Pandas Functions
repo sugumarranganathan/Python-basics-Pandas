@@ -1,0 +1,28 @@
+⭐ Most Important Pandas Functions
+
+| Priority | Function            | Why learn it?            |
+| -------- | ------------------- | ------------------------ |
+| ⭐⭐⭐⭐⭐    | `pd.read_csv()`     | Load datasets            |
+| ⭐⭐⭐⭐⭐    | `pd.DataFrame()`    | Create tables            |
+| ⭐⭐⭐⭐⭐    | `head()`            | View data                |
+| ⭐⭐⭐⭐⭐    | `info()`            | Understand dataset       |
+| ⭐⭐⭐⭐⭐    | `describe()`        | Statistical summary      |
+| ⭐⭐⭐⭐⭐    | `shape`             | Rows & columns           |
+| ⭐⭐⭐⭐⭐    | `dtypes`            | Data types               |
+| ⭐⭐⭐⭐⭐    | `loc[]`             | Select/filter            |
+| ⭐⭐⭐⭐⭐    | `iloc[]`            | Position-based selection |
+| ⭐⭐⭐⭐⭐    | `isna()`            | Find missing data        |
+| ⭐⭐⭐⭐⭐    | `fillna()`          | Handle missing data      |
+| ⭐⭐⭐⭐⭐    | `dropna()`          | Remove missing data      |
+| ⭐⭐⭐⭐⭐    | `drop_duplicates()` | Remove duplicates        |
+| ⭐⭐⭐⭐⭐    | `astype()`          | Change data type         |
+| ⭐⭐⭐⭐⭐    | `sort_values()`     | Sort data                |
+| ⭐⭐⭐⭐⭐    | `value_counts()`    | Count categories         |
+| ⭐⭐⭐⭐⭐    | `groupby()`         | Group and analyze        |
+| ⭐⭐⭐⭐⭐    | `merge()`           | Join datasets            |
+| ⭐⭐⭐⭐⭐    | `concat()`          | Combine datasets         |
+| ⭐⭐⭐⭐⭐    | `to_datetime()`     | Work with dates          |
+| ⭐⭐⭐⭐⭐    | `apply()`           | Apply custom logic       |
+| ⭐⭐⭐⭐⭐    | `to_numpy()`        | DataFrame → NumPy        |
+
+
