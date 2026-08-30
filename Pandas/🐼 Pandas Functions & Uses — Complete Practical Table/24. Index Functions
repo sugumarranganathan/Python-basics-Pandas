@@ -1,0 +1,8 @@
+24. Index Functions
+
+| Method          | Use                      | Example                |
+| --------------- | ------------------------ | ---------------------- |
+| `set_index()`   | Set a column as index    | `df.set_index("ID")`   |
+| `reset_index()` | Reset index              | `df.reset_index()`     |
+| `reindex()`     | Change/reorder index     | `df.reindex(...)`      |
+| `rename_axis()` | Rename index/column axis | `df.rename_axis("ID")` |
