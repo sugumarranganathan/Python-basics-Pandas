@@ -1,0 +1,24 @@
+11. Missing Values
+
+This is very important in Data Science.
+
+| Method      | Use                         | Example        |
+| ----------- | --------------------------- | -------------- |
+| `isna()`    | Find missing values         | `df.isna()`    |
+| `isnull()`  | Find missing values         | `df.isnull()`  |
+| `notna()`   | Find non-missing values     | `df.notna()`   |
+| `notnull()` | Find non-missing values     | `df.notnull()` |
+| `dropna()`  | Remove missing rows/columns | `df.dropna()`  |
+| `fillna()`  | Fill missing values         | `df.fillna(0)` |
+| `ffill()`   | Forward fill                | `df.ffill()`   |
+| `bfill()`   | Backward fill               | `df.bfill()`   |
+
+===
+
+Example
+df["Age"] = df["Age"].fillna(df["Age"].mean())
+
+Meaning:
+
+Replace missing Age values with the average Age.
+
