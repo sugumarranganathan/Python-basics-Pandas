@@ -1,0 +1,36 @@
+Matplotlib — Graphs and Visualization 📈
+
+Matplotlib is used to show your data visually.
+
+For example:
+
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 15, 30, 25]
+
+plt.plot(x, y)
+
+plt.show()
+
+===
+
+It creates a line graph.
+
+You can create:
+
+Line charts
+Bar charts
+Scatter plots
+Histograms
+Pie charts
+
+Example:
+
+plt.bar(x, y)
+plt.show()
+Think:
+
+Matplotlib = Make graphs from data
+
+====
