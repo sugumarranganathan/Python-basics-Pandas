@@ -1,0 +1,10 @@
+6. Selecting Columns
+
+| Method / Syntax | Use                               | Example              |
+| --------------- | --------------------------------- | -------------------- |
+| `df["column"]`  | Select one column                 | `df["Age"]`          |
+| `df[["A","B"]]` | Select multiple columns           | `df[["Name","Age"]]` |
+| `df.loc[]`      | Label-based selection             | `df.loc[0, "Age"]`   |
+| `df.iloc[]`     | Position-based selection          | `df.iloc[0, 1]`      |
+| `df.at[]`       | Fast single-value label access    | `df.at[0, "Age"]`    |
+| `df.iat[]`      | Fast single-value position access | `df.iat[0, 1]`       |
