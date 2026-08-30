@@ -1,0 +1,30 @@
+17. Combining DataFrames
+
+Extremely important for real-world projects.
+
+| Function / Method | Use                                        | Example                       |
+| ----------------- | ------------------------------------------ | ----------------------------- |
+| `concat()`        | Combine DataFrames                         | `pd.concat([df1, df2])`       |
+| `merge()`         | Join DataFrames                            | `pd.merge(df1, df2, on="ID")` |
+| `join()`          | Join using index                           | `df1.join(df2)`               |
+| `combine_first()` | Fill missing values from another DataFrame | `df1.combine_first(df2)`      |
+
+
+===
+
+concat()
+df1
+ ↓
+df2
+ ↓
+Combined DataFrame
+
+====
+
+merge()
+
+Similar to a SQL JOIN.
+
+pd.merge(df1, df2, on="Customer_ID")
+
+=====
