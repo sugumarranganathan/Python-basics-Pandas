@@ -1,1 +1,43 @@
+Pandas — Tables and Data Analysis 📊
 
+Pandas is mainly used to work with structured/tabular data.
+
+For example, an Excel-like table:
+
+Name     Age    Salary
+John     25     30000
+Mary     30     40000
+Bill     28     35000
+
+====
+
+Python:
+
+import pandas as pd
+
+data = {
+    "Name": ["John", "Mary", "Bill"],
+    "Age": [25, 30, 28],
+    "Salary": [30000, 40000, 35000]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+Now you can easily:
+
+df["Salary"].mean()
+
+Filter:
+
+df[df["Salary"] > 30000]
+
+Sort:
+
+df.sort_values("Salary")
+Think:
+
+Pandas = Excel-like tables + Data Analysis
+
+====
