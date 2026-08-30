@@ -11,3 +11,10 @@ These are very important in real projects.
 | `pd.read_html()`    | Read HTML tables             | `pd.read_html(url)`               |
 | `pd.read_parquet()` | Read Parquet file            | `pd.read_parquet("data.parquet")` |
 | `pd.read_pickle()`  | Read Pickle file             | `pd.read_pickle("data.pkl")`      |
+
+=====
+
+Most important:
+df = pd.read_csv("data.csv")
+
+This is one of the first Pandas commands you should learn.
