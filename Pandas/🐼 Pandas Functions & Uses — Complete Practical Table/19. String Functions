@@ -1,0 +1,18 @@
+19. String Functions
+
+Pandas provides .str for working with text columns.
+
+| Method              | Use                  | Example                                |
+| ------------------- | -------------------- | -------------------------------------- |
+| `.str.lower()`      | Convert to lowercase | `df["Name"].str.lower()`               |
+| `.str.upper()`      | Convert to uppercase | `df["Name"].str.upper()`               |
+| `.str.title()`      | Title case           | `df["Name"].str.title()`               |
+| `.str.strip()`      | Remove spaces        | `df["Name"].str.strip()`               |
+| `.str.len()`        | String length        | `df["Name"].str.len()`                 |
+| `.str.contains()`   | Search text          | `df["Name"].str.contains("John")`      |
+| `.str.startswith()` | Check beginning      | `df["Name"].str.startswith("J")`       |
+| `.str.endswith()`   | Check ending         | `df["Name"].str.endswith("n")`         |
+| `.str.replace()`    | Replace text         | `df["Name"].str.replace("John","Ram")` |
+| `.str.split()`      | Split text           | `df["Name"].str.split(" ")`            |
+| `.str.extract()`    | Extract pattern      | `df["Text"].str.extract(...)`          |
+| `.str.find()`       | Find position        | `df["Name"].str.find("a")`             |
