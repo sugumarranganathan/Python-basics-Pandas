@@ -1,0 +1,21 @@
+20. Date and Time Functions
+
+First convert the column:
+
+df["Date"] = pd.to_datetime(df["Date"])
+
+===
+
+Then:
+
+| Method              | Use                     | Example                       |
+| ------------------- | ----------------------- | ----------------------------- |
+| `.dt.year`          | Get year                | `df["Date"].dt.year`          |
+| `.dt.month`         | Get month               | `df["Date"].dt.month`         |
+| `.dt.day`           | Get day                 | `df["Date"].dt.day`           |
+| `.dt.hour`          | Get hour                | `df["Date"].dt.hour`          |
+| `.dt.minute`        | Get minute              | `df["Date"].dt.minute`        |
+| `.dt.day_name()`    | Get weekday name        | `df["Date"].dt.day_name()`    |
+| `.dt.month_name()`  | Get month name          | `df["Date"].dt.month_name()`  |
+| `.dt.weekday`       | Get weekday number      | `df["Date"].dt.weekday`       |
+| `.dt.days_in_month` | Number of days in month | `df["Date"].dt.days_in_month` |
