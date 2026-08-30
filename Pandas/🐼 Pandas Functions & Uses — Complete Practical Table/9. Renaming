@@ -1,0 +1,17 @@
+9. Renaming
+
+| Method       | Use                        | Example                              |
+| ------------ | -------------------------- | ------------------------------------ |
+| `rename()`   | Rename columns/rows        | `df.rename(columns={"Age":"Years"})` |
+| `set_axis()` | Change column/index labels | `df.set_axis(["A","B"], axis=1)`     |
+
+===
+
+Example:
+
+df.rename(
+    columns={"Age": "Years"},
+    inplace=True
+)
+
+====
