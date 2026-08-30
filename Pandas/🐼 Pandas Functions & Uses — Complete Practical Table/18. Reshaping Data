@@ -1,0 +1,12 @@
+18. Reshaping Data
+
+| Method          | Use                     | Example                                                       |
+| --------------- | ----------------------- | ------------------------------------------------------------- |
+| `pivot()`       | Reshape data            | `df.pivot(index="Date", columns="City", values="Sales")`      |
+| `pivot_table()` | Create summary table    | `df.pivot_table(values="Sales", index="City", aggfunc="sum")` |
+| `melt()`        | Convert wide → long     | `pd.melt(df)`                                                 |
+| `stack()`       | Move columns into index | `df.stack()`                                                  |
+| `unstack()`     | Move index into columns | `df.unstack()`                                                |
+| `transpose()`   | Swap rows and columns   | `df.transpose()`                                              |
+| `T`             | Transpose shortcut      | `df.T`                                                        |
+
