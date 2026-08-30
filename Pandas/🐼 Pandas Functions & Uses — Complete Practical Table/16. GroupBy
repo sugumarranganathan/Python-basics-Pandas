@@ -1,0 +1,22 @@
+16. GroupBy — Very Important ⭐
+
+groupby() is one of the most important Pandas concepts for Data Analysis.
+
+| Method        | Use                                     | Example                                                 |
+| ------------- | --------------------------------------- | ------------------------------------------------------- |
+| `groupby()`   | Group data                              | `df.groupby("City")`                                    |
+| `sum()`       | Sum groups                              | `df.groupby("City")["Sales"].sum()`                     |
+| `mean()`      | Average groups                          | `df.groupby("City")["Sales"].mean()`                    |
+| `count()`     | Count groups                            | `df.groupby("City")["Sales"].count()`                   |
+| `min()`       | Minimum per group                       | `df.groupby("City")["Sales"].min()`                     |
+| `max()`       | Maximum per group                       | `df.groupby("City")["Sales"].max()`                     |
+| `agg()`       | Multiple aggregations                   | `df.groupby("City")["Sales"].agg(["sum","mean","max"])` |
+| `transform()` | Group calculation while preserving rows | `df.groupby("City")["Sales"].transform("mean")`         |
+
+
+Example
+df.groupby("City")["Sales"].sum()
+
+Means:
+
+Group the data by City and calculate total Sales for each city.
