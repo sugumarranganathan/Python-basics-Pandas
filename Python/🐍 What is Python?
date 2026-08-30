@@ -1,0 +1,343 @@
+🐍 What is Python?
+
+Python is a high-level, general-purpose programming language.
+
+Python → tells the computer what to do.
+
+Libraries → give Python additional capabilities.
+
+=============
+
+In very simple words:
+
+Python is a language that allows us to give instructions to a computer.
+
+For example, if you want the computer to add two numbers:
+
+a = 10
+b = 20
+
+result = a + b
+
+print(result)
+
+Output:
+
+30
+
+Here, you wrote instructions in Python, and the computer executed them.
+
+=====
+
+Why do we use Python?
+
+Python is used in many areas:
+
+| Area                    | What Python is used for              |
+| ----------------------- | ------------------------------------ |
+| 🖥️ Software            | Building applications                |
+| 🌐 Web                  | Websites and APIs                    |
+| 📊 Data Science         | Data analysis                        |
+| 🤖 Machine Learning     | Building ML models                   |
+| 🧠 AI                   | Generative AI, LLM applications      |
+| 👁️ Computer Vision     | Image/video processing               |
+| ⚙️ Automation           | Automating repetitive tasks          |
+| ☁️ Cloud                | AWS, Azure, etc.                     |
+| 🔬 Scientific Computing | Mathematical/scientific calculations |
+
+
+====
+
+Why is Python popular?
+1. Easy to read
+
+Python syntax is relatively simple.
+
+For example:
+
+if age >= 18:
+    print("Adult")
+
+You can almost read it like English:
+
+If age is greater than or equal to 18, print Adult.
+
+=====
+
+2. Less code
+
+For example, printing something:
+
+print("Hello World")
+
+Very simple.
+
+=====
+
+3. Huge number of libraries
+
+Python itself gives you the programming language.
+
+Then you can install libraries that provide additional functionality.
+
+Python
+   │
+   ├── NumPy
+   │      ↓
+   │   Numerical calculations
+   │
+   ├── Pandas
+   │      ↓
+   │   Data analysis
+   │
+   ├── Matplotlib
+   │      ↓
+   │   Graphs
+   │
+   ├── Scikit-learn
+   │      ↓
+   │   Machine Learning
+   │
+   ├── OpenCV
+   │      ↓
+   │   Computer Vision
+   │
+   ├── FastAPI
+   │      ↓
+   │   APIs
+   │
+   └── LangChain
+          ↓
+       LLM applications
+
+So when you are learning NumPy, Pandas, Matplotlib and Scikit-learn, you are actually learning Python libraries that work with Python.
+
+====
+
+Python's basic building blocks
+
+Before learning libraries, you need to understand Python itself.
+
+1. Variables
+
+A variable stores a value.
+
+name = "Sugumar"
+age = 30
+salary = 50000
+
+Think:
+
+name   → "Sugumar"
+age    → 30
+salary → 50000
+
+====
+
+2. Data types
+
+Python has different types of data.
+
+name = "Sugumar"       # string
+age = 30               # integer
+salary = 50000.50      # float
+is_working = True      # boolean
+
+| Data        | Type    |
+| ----------- | ------- |
+| `"Sugumar"` | `str`   |
+| `30`        | `int`   |
+| `50000.50`  | `float` |
+| `True`      | `bool`  |
+
+
+=====
+
+3. Operators
+
+Python can perform calculations.
+
+a = 10
+b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+
+Operators:
+
++  Addition
+-  Subtraction
+*  Multiplication
+/  Division
+%  Modulus
+
+=====
+
+4. Conditions
+
+We can tell Python to make decisions.
+
+age = 20
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+Python checks the condition and chooses what to execute.
+
+=====
+
+5. Loops
+
+Loops allow us to repeat something.
+
+for i in range(5):
+    print(i)
+
+Output:
+
+0
+1
+2
+3
+4
+
+Instead of writing:
+
+print(0)
+print(1)
+print(2)
+print(3)
+print(4)
+
+we use a loop.
+
+=====
+
+6. Functions
+
+A function is a reusable block of code.
+
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+
+Output:
+
+30
+
+You can use the function again:
+
+add(100, 200)
+
+Output:
+
+300
+
+====
+
+7. Data structures
+
+Python provides structures for storing multiple values.
+
+List
+numbers = [10, 20, 30, 40]
+Tuple
+numbers = (10, 20, 30, 40)
+Dictionary
+student = {
+    "name": "John",
+    "age": 25
+}
+Set
+numbers = {10, 20, 30, 40}
+
+====
+
+8. Object-Oriented Programming
+
+Python also supports OOP.
+
+You can create:
+
+Classes
+Objects
+Methods
+Inheritance
+Encapsulation
+Polymorphism
+
+Example:
+
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print("Hello", self.name)
+
+student = Student("John")
+
+student.greet()
+
+=====
+
+                 PYTHON
+           Programming Language
+                    │
+       ┌────────────┼────────────┐
+       ↓            ↓            ↓
+    NumPy         Pandas      Matplotlib
+       ↓            ↓            ↓
+    Numbers       Tables       Graphs
+                    │
+                    ↓
+             Scikit-learn
+                    ↓
+            Machine Learning
+
+====
+
+Example
+
+Python:
+
+age = 25
+
+NumPy:
+
+ages = np.array([25, 30, 35])
+
+Pandas:
+
+df = pd.DataFrame({
+    "Age": [25, 30, 35]
+})
+
+Matplotlib:
+
+plt.plot(ages)
+
+Scikit-learn:
+
+model.fit(X, y)
+
+So:
+
+Python is the foundation. NumPy, Pandas, Matplotlib and Scikit-learn are libraries built to help Python perform specialized tasks.
+
+====
+
+Python is a high-level, interpreted, general-purpose programming language known for its simple and readable syntax. 
+
+It is widely used in software development, data science, machine learning, artificial intelligence, automation, and web development
+
+=====
+
