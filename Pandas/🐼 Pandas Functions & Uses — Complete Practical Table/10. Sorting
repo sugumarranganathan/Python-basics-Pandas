@@ -1,0 +1,8 @@
+10. Sorting
+
+| Method          | Use                   | Example                     |
+| --------------- | --------------------- | --------------------------- |
+| `sort_values()` | Sort by column values | `df.sort_values("Age")`     |
+| `sort_index()`  | Sort by index         | `df.sort_index()`           |
+| `nlargest()`    | Get largest values    | `df.nlargest(5, "Salary")`  |
+| `nsmallest()`   | Get smallest values   | `df.nsmallest(5, "Salary")` |
