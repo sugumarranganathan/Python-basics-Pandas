@@ -1,0 +1,123 @@
+NumPy        → Numbers 🔢
+Pandas       → Tables 📋
+Matplotlib   → Graphs 📈
+Scikit-learn → Machine Learning 🤖
+
+======
+
+What is the difference between NumPy, Pandas, Matplotlib and Scikit-learn?"
+
+NumPy is used for numerical computing and multidimensional arrays. 
+
+Pandas is used for data manipulation and analysis using DataFrames and Series. 
+
+Matplotlib is used for data visualization and creating charts and graphs. 
+
+Scikit-learn is a Machine Learning library used for preprocessing, model training, prediction, and model evaluation
+
+=====
+
+They are not competing libraries. They complement each other and are commonly used together in a Data Science / Machine Learning project.
+
+=====
+
+             DATA
+              ↓
+          ┌────────┐
+          │ NumPy  │
+          └────────┘
+              ↓
+      Numerical operations
+              ↓
+          ┌────────┐
+          │ Pandas │
+          └────────┘
+              ↓
+       Clean & analyze
+              ↓
+       ┌─────────────┐
+       │ Matplotlib  │
+       └─────────────┘
+              ↓
+          Visualize
+              ↓
+      ┌───────────────┐
+      │ Scikit-learn  │
+      └───────────────┘
+              ↓
+       Machine Learning
+
+
+=====
+
+🧠 One real-world example
+
+Suppose you have an EV charging dataset:
+
+| Date  | Temperature | EV Count | Charging Demand |
+| ----- | ----------: | -------: | --------------: |
+| Jan 1 |          25 |      100 |             500 |
+| Jan 2 |          27 |      120 |             600 |
+| Jan 3 |          26 |      150 |             750 |
+
+
+====================
+
+NumPy
+
+Perform numerical calculations:
+
+import numpy as np
+
+demand = np.array([500, 600, 750])
+
+print(demand.mean())
+
+Purpose: numerical calculation.
+
+-----
+
+Pandas
+
+Load and analyze the complete table:
+
+import pandas as pd
+
+df = pd.read_csv("ev_data.csv")
+
+print(df.head())
+
+Purpose: data manipulation and analysis.
+
+-----
+
+Matplotlib
+
+Visualize charging demand:
+
+import matplotlib.pyplot as plt
+
+plt.plot(df["Date"], df["Charging Demand"])
+
+plt.show()
+
+Purpose: visualization.
+
+-----
+
+Scikit-learn
+
+Build a prediction model:
+
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+
+model.fit(X, y)
+
+prediction = model.predict(new_data)
+
+Purpose: Machine Learning.
+
+------
+
