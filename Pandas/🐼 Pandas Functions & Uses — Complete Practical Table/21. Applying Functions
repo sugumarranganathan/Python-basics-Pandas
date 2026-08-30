@@ -1,0 +1,13 @@
+21. Applying Functions
+
+| Method       | Use                               | Example                                                        |
+| ------------ | --------------------------------- | -------------------------------------------------------------- |
+| `apply()`    | Apply custom function             | `df["Age"].apply(lambda x: x+1)`                               |
+| `map()`      | Map values/function on Series     | `df["Gender"].map({"M":"Male","F":"Female"})`                  |
+| `applymap()` | Apply function element-by-element | Older approach; use `DataFrame.map()` in newer Pandas versions |
+
+
+Example:
+
+df["Age"] = df["Age"].apply(lambda x: x + 1)
+
