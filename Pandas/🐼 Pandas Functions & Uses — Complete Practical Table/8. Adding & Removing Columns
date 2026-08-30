@@ -1,0 +1,10 @@
+8. Adding / Removing Columns
+
+| Method / Syntax | Use                       | Example                                 |
+| --------------- | ------------------------- | --------------------------------------- |
+| `df["New"] =`   | Add column                | `df["Total"] = df["Price"] * df["Qty"]` |
+| `assign()`      | Add columns               | `df.assign(Total=df.Price * df.Qty)`    |
+| `insert()`      | Insert column at position | `df.insert(1, "Age", ages)`             |
+| `drop()`        | Remove column/row         | `df.drop("Age", axis=1)`                |
+| `pop()`         | Remove and return column  | `df.pop("Age")`                         |
+| `del`           | Delete column             | `del df["Age"]`                         |
