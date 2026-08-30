@@ -1,0 +1,7 @@
+1. Importing Pandas
+
+| Function / Code       | Use                  | Example               |
+| --------------------- | -------------------- | --------------------- |
+| `import pandas as pd` | Import Pandas        | `import pandas as pd` |
+| `pd.__version__`      | Check Pandas version | `pd.__version__`      |
+
