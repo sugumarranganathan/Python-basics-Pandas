@@ -1,0 +1,21 @@
+23. Window / Rolling Functions
+
+Useful for time series and forecasting.
+
+| Method        | Use                                 | Example                          |
+| ------------- | ----------------------------------- | -------------------------------- |
+| `rolling()`   | Moving/window calculations          | `df["Sales"].rolling(7).mean()`  |
+| `expanding()` | Expanding calculations              | `df["Sales"].expanding().mean()` |
+| `ewm()`       | Exponentially weighted calculations | `df["Sales"].ewm(span=7).mean()` |
+
+
+====
+
+Example:
+
+df["7_day_average"] = df["Sales"].rolling(7).mean()
+
+Meaning:
+
+Calculate the average Sales over every 7-row window.
+
