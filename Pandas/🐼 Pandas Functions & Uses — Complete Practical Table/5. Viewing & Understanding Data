@@ -1,0 +1,19 @@
+5. Viewing / Understanding Data
+
+| Method           | Use                              | Example             |
+| ---------------- | -------------------------------- | ------------------- |
+| `head()`         | Show first rows                  | `df.head()`         |
+| `tail()`         | Show last rows                   | `df.tail()`         |
+| `sample()`       | Show random rows                 | `df.sample(5)`      |
+| `info()`         | Show structure and data types    | `df.info()`         |
+| `describe()`     | Statistical summary              | `df.describe()`     |
+| `shape`          | Number of rows and columns       | `df.shape`          |
+| `size`           | Total number of elements         | `df.size`           |
+| `ndim`           | Number of dimensions             | `df.ndim`           |
+| `columns`        | Get column names                 | `df.columns`        |
+| `index`          | Get row index                    | `df.index`          |
+| `dtypes`         | Get data types                   | `df.dtypes`         |
+| `memory_usage()` | Check memory usage               | `df.memory_usage()` |
+| `empty`          | Check whether DataFrame is empty | `df.empty`          |
+
+
