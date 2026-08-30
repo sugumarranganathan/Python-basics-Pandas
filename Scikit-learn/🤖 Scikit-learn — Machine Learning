@@ -1,0 +1,50 @@
+Scikit-learn — Machine Learning 🤖
+
+Scikit-learn is used to build Machine Learning models.
+
+For example, suppose we have:
+
+Hours Studied → Exam Score
+
+1 → 40
+2 → 45
+3 → 55
+4 → 65
+5 → 75
+
+We want the computer to learn the relationship and predict the score.
+
+===
+
+We can use Linear Regression:
+
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+
+model.fit(X, y)
+
+prediction = model.predict([[6]])
+
+print(prediction)
+
+===
+
+Scikit-learn provides algorithms for:
+
+Linear Regression
+Logistic Regression
+Decision Trees
+Random Forest
+KNN
+SVM
+Clustering
+Train/test splitting
+Model evaluation
+Preprocessing
+
+Think:
+
+Scikit-learn = Machine Learning
+
+====
