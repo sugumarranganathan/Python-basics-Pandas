@@ -1,0 +1,19 @@
+15. Counting / Unique Values
+
+| Method           | Use                     | Example                     |
+| ---------------- | ----------------------- | --------------------------- |
+| `value_counts()` | Count each unique value | `df["City"].value_counts()` |
+| `unique()`       | Get unique values       | `df["City"].unique()`       |
+| `nunique()`      | Count unique values     | `df["City"].nunique()`      |
+| `duplicated()`   | Identify duplicates     | `df["City"].duplicated()`   |
+
+
+Example:
+
+df["City"].value_counts()
+
+Output might be:
+
+Chennai    50
+Mumbai     30
+Delhi      20
