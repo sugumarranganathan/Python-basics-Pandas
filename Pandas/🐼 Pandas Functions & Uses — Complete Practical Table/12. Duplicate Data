@@ -1,0 +1,11 @@
+12. Duplicate Data
+
+| Method              | Use                 | Example                |
+| ------------------- | ------------------- | ---------------------- |
+| `duplicated()`      | Find duplicate rows | `df.duplicated()`      |
+| `drop_duplicates()` | Remove duplicates   | `df.drop_duplicates()` |
+
+Example:
+
+df = df.drop_duplicates()
+
