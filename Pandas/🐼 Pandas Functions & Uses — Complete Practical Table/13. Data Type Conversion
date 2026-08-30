@@ -1,0 +1,9 @@
+13. Data Type Conversion
+
+| Method             | Use                              | Example                           |
+| ------------------ | -------------------------------- | --------------------------------- |
+| `astype()`         | Change data type                 | `df["Age"].astype(int)`           |
+| `convert_dtypes()` | Automatically improve data types | `df.convert_dtypes()`             |
+| `to_numeric()`     | Convert to numeric               | `pd.to_numeric(df["Age"])`        |
+| `to_datetime()`    | Convert to datetime              | `pd.to_datetime(df["Date"])`      |
+| `to_timedelta()`   | Convert to time duration         | `pd.to_timedelta(df["Duration"])` |
