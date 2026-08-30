@@ -1,0 +1,11 @@
+7. Filtering Data
+
+| Method / Syntax   | Use                              | Example                                  |
+| ----------------- | -------------------------------- | ---------------------------------------- |
+| Boolean filtering | Filter rows                      | `df[df["Age"] > 25]`                     |
+| `loc[]`           | Filter + select columns          | `df.loc[df["Age"] > 25, ["Name","Age"]]` |
+| `query()`         | Filter using expression          | `df.query("Age > 25")`                   |
+| `isin()`          | Check values against a list      | `df["City"].isin(["Chennai","Mumbai"])`  |
+| `between()`       | Check range                      | `df["Age"].between(20,30)`               |
+| `where()`         | Keep values meeting condition    | `df["Age"].where(df["Age"] > 18)`        |
+| `mask()`          | Replace values meeting condition | `df["Age"].mask(df["Age"] < 18)`         |
