@@ -1,0 +1,53 @@
+Python data types - 8 main types
+-------------------------------
+
+| # | Data Type   | Example              | Meaning                               |
+| - | ----------- | -------------------- | ------------------------------------- |
+| 1 | **int**     | `10`                 | Whole numbers                         |
+| 2 | **float**   | `10.5`               | Decimal numbers                       |
+| 3 | **complex** | `2 + 3j`             | Complex numbers                       |
+| 4 | **str**     | `"Python"`           | Text/string                           |
+| 5 | **list**    | `[10, 20, 30]`       | Ordered, changeable collection        |
+| 6 | **tuple**   | `(10, 20, 30)`       | Ordered, unchangeable collection      |
+| 7 | **set**     | `{10, 20, 30}`       | Unordered collection of unique values |
+| 8 | **dict**    | `{'A': 10, 'B': 20}` | Key-value pairs                       |
+
+=====
+
+Also important
+
+Python has a few other built-in types:
+
+| Type       | Example         | Purpose             |
+| ---------- | --------------- | ------------------- |
+| `bool`     | `True`, `False` | True/False          |
+| `NoneType` | `None`          | Represents no value |
+| `range`    | `range(10)`     | Sequence of numbers |
+| `bytes`    | `b'Hello'`      | Binary data         |
+
+
+=====
+
+List      → [ ]
+Tuple     → ( )
+Set       → { }
+Dictionary → {key: value}
+
+=====
+
+int
+float
+ASCII / characters
+
+=====
+
+specific numeric data types commonly used by NumPy/Pandas
+
+int32  → integer → 32 bits
+int64  → integer → 64 bits
+float32 → decimal → 32 bits
+float64 → decimal → 64 bits
+
+=====
+
+
