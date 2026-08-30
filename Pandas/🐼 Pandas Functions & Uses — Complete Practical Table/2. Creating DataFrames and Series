@@ -1,0 +1,10 @@
+2. Creating DataFrames and Series
+
+| Function / Method  | Use                     | Example                                  |
+| ------------------ | ----------------------- | ---------------------------------------- |
+| `pd.DataFrame()`   | Create a DataFrame      | `pd.DataFrame(data)`                     |
+| `pd.Series()`      | Create a Series         | `pd.Series([10,20,30])`                  |
+| `pd.Index()`       | Create an index         | `pd.Index([1,2,3])`                      |
+| `pd.date_range()`  | Create date sequence    | `pd.date_range("2026-01-01", periods=5)` |
+| `pd.to_datetime()` | Convert values to dates | `pd.to_datetime(df["Date"])`             |
+| `pd.Categorical()` | Create categorical data | `pd.Categorical(["A","B","A"])`          |
