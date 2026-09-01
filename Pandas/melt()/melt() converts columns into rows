@@ -1,0 +1,43 @@
+Think of melt() as turning columns into rows.
+
+In real-world data, you may receive data in a wide format, where each month, product, department, or metric is stored as a separate column. For analysis, you often need long format, where those column names become values in a single column.
+
+Real-time example: Monthly Sales Report
+
+Suppose a company gives you this sales report:
+
+| Employee | Department |   Jan |   Feb |   Mar |
+| -------- | ---------- | ----: | ----: | ----: |
+| Ravi     | Sales      | 50000 | 55000 | 60000 |
+| Priya    | Sales      | 45000 | 52000 | 58000 |
+| Arun     | Marketing  | 30000 | 35000 | 40000 |
+
+
+This is wide format.
+
+You want to analyze sales month-by-month. Instead of having Jan, Feb, and Mar as separate columns, you want:
+
+| Employee | Department | Month | Sales |
+| -------- | ---------- | ----- | ----: |
+| Ravi     | Sales      | Jan   | 50000 |
+| Ravi     | Sales      | Feb   | 55000 |
+| Ravi     | Sales      | Mar   | 60000 |
+| Priya    | Sales      | Jan   | 45000 |
+| Priya    | Sales      | Feb   | 52000 |
+| Priya    | Sales      | Mar   | 58000 |
+| Arun     | Marketing  | Jan   | 30000 |
+| Arun     | Marketing  | Feb   | 35000 |
+| Arun     | Marketing  | Mar   | 40000 |
+
+This is long format.
+
+melt() does exactly this transformation.
+
+======
+
+pd.melt() is a pandas function used to transform a DataFrame from wide format 
+to long format by converting selected columns into rows while keeping identifier columns unchanged.
+
+=======
+
+
