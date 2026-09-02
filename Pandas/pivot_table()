@@ -1,0 +1,90 @@
+pivot_table()
+
+pivot_table() is more powerful because it can aggregate data using functions such as:
+
+sum
+mean
+count
+min
+max
+
+Syntax:
+
+df.pivot_table(
+    index="row_column",
+    columns="column_column",
+    values="value_column",
+    aggfunc="sum"
+)
+
+===
+
+Real-time example
+
+Imagine a company has multiple sales transactions:
+
+data = {
+    "Name": ["John", "John", "John", "Mary", "Mary"],
+    "Product": ["Laptop", "Laptop", "Mobile", "Laptop", "Mobile"],
+    "Sales": [50000, 30000, 20000, 60000, 25000]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+====
+
+| Name | Product |  Sales |
+| ---- | ------- | -----: |
+| John | Laptop  | 50,000 |
+| John | Laptop  | 30,000 |
+| John | Mobile  | 20,000 |
+| Mary | Laptop  | 60,000 |
+| Mary | Mobile  | 25,000 |
+
+
+====
+
+There are two Laptop transactions for John.
+
+If we use pivot():
+
+df.pivot(
+    index="Name",
+    columns="Product",
+    values="Sales"
+)
+
+❌ This produces an error because John has duplicate Name + Product combinations.
+
+Instead, use:
+
+result = df.pivot_table(
+    index="Name",
+    columns="Product",
+    values="Sales",
+    aggfunc="sum"
+)
+
+print(result)
+
+======
+
+Result
+
+| Name | Laptop | Mobile |
+| ---- | -----: | -----: |
+| John | 80,000 | 20,000 |
+| Mary | 60,000 | 25,000 |
+
+John's Laptop sales:
+
+50,000 + 30,000 = 80,000
+
+===
+
+
+
+
+
