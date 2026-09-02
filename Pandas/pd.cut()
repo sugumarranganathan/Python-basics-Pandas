@@ -1,0 +1,85 @@
+pd.cut() in Pandas
+
+pd.cut() is used to divide continuous numerical data into ranges (bins) and assign each value to a category.
+                                                          -------
+
+
+Simple meaning
+
+pd.cut() converts numbers into groups/ranges.
+
+For example, instead of having:
+
+Age
+22
+27
+35
+42
+58
+
+you can create age groups:
+
+18–30
+31–40
+41–50
+51–60
+
+====
+
+1. Basic Example
+import pandas as pd
+
+ages = [22, 27, 35, 42, 58]
+
+bins = [18, 30, 40, 50, 60]
+
+result = pd.cut(ages, bins=bins)
+
+print(result)
+
+Output:
+
+(18, 30]
+(18, 30]
+(30, 40]
+(40, 50]
+(50, 60]
+
+Here:
+
+18–30  → Young
+31–40  → Middle
+41–50  → Senior
+51–60  → Older
+
+====
+
+2. Giving Meaningful Labels
+
+Usually, we don't want (18, 30]. We want meaningful names.
+
+ages = [22, 27, 35, 42, 58]
+
+bins = [18, 30, 40, 50, 60]
+
+labels = ["Young", "Adult", "Senior", "Older"]
+
+result = pd.cut(
+    ages,
+    bins=bins,
+    labels=labels
+)
+
+print(result)
+
+===
+
+Output:
+
+Young
+Young
+Adult
+Senior
+Older
+
+=====
