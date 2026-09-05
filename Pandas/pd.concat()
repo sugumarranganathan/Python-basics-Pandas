@@ -147,5 +147,13 @@ Rows or Columns
 
 ====
 
+| Axis     | Direction | Think       |
+| -------- | --------- | ----------- |
+| `axis=0` | ⬇️ Down   | **Rows**    |
+| `axis=1` | ➡️ Across | **Columns** |
+
+
+=====
+
 
 
