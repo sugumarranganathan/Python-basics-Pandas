@@ -1,0 +1,185 @@
+pd.merge() in Pandas
+
+pd.merge() is used to combine two DataFrames based on a common column or key.
+
+Think of it like a SQL JOIN.
+
+Simple example
+
+Suppose we have two DataFrames:
+
+Customers
+
+import pandas as pd
+
+customers = pd.DataFrame({
+    "customer_id": [1, 2, 3],
+    "name": ["Sugumar", "Ravi", "Kumar"]
+})
+
+
+===
+
+| customer_id | name    |
+| ----------: | ------- |
+|           1 | Sugumar |
+|           2 | Ravi    |
+|           3 | Kumar   |
+
+
+===
+
+Orders
+
+orders = pd.DataFrame({
+    "customer_id": [1, 2, 4],
+    "amount": [500, 700, 300]
+})
+
+===
+
+| customer_id | amount |
+| ----------: | -----: |
+|           1 |    500 |
+|           2 |    700 |
+|           4 |    300 |
+
+
+====
+
+Both have a common column:
+
+customer_id
+
+Now:
+
+result = pd.merge(customers, orders, on="customer_id")
+
+Result
+
+| customer_id | name    | amount |
+| ----------: | ------- | -----: |
+|           1 | Sugumar |    500 |
+|           2 | Ravi    |    700 |
+
+By default, pd.merge() performs an inner join, so only matching customer_id values are included.
+
+=====
+
+Real-time example
+
+Imagine your beauty parlour appointment system has two tables.
+
+Customers
+---------
+
+customers = pd.DataFrame({
+    "customer_id": [101, 102, 103],
+    "customer_name": ["Anu", "Priya", "Divya"]
+})
+
+====
+
+Appointments
+------------
+
+appointments = pd.DataFrame({
+    "customer_id": [101, 102, 104],
+    "service": ["Facial", "Haircut", "Manicure"],
+    "time": ["10:00", "11:00", "12:00"]
+})
+
+====
+
+Merge them:
+
+result = pd.merge(
+    customers,
+    appointments,
+    on="customer_id"
+)
+
+Result:
+
+| customer_id | customer_name | service | time  |
+| ----------: | ------------- | ------- | ----- |
+|         101 | Anu           | Facial  | 10:00 |
+|         102 | Priya         | Haircut | 11:00 |
+
+
+====
+
+Important pd.merge() parameters
+1. on
+
+Specifies the common column:
+
+pd.merge(df1, df2, on="customer_id")
+
+====
+
+2. how
+
+Controls which rows are retained.
+
+pd.merge(df1, df2, on="customer_id", how="inner")
+
+====
+
+Common options:
+
+inner   → matching rows only
+left    → all rows from left DataFrame
+right   → all rows from right DataFrame
+outer   → all rows from both DataFrames
+Example
+pd.merge(customers, appointments,
+         on="customer_id",
+         how="left")
+
+This keeps all customers, even customers who don't have an appointment.
+
+====
+
+3. Different column names
+
+Suppose:
+
+customers
+
+has:
+
+customer_id
+
+but another DataFrame has:
+
+client_id
+
+Use:
+
+pd.merge(
+    customers,
+    appointments,
+    left_on="customer_id",
+    right_on="client_id"
+)
+
+====
+
+pd.merge()
+
+        DataFrame 1
+             +
+        DataFrame 2
+             ↓
+       common key
+             ↓
+      Combined DataFrame
+
+pd.merge() = Combine DataFrames using a common key.
+
+====
+
+
+
+
