@@ -1,0 +1,151 @@
+pd.concat() in Pandas
+
+pd.concat() is used to combine two or more DataFrames together.
+
+The easiest way to remember:
+
+concat() = concatenate / stack DataFrames
+
+=====
+
+1. Combine rows — axis=0
+
+Suppose you have January and February sales:
+
+import pandas as pd
+
+jan = pd.DataFrame({
+    "name": ["Sugumar", "Ravi"],
+    "amount": [500, 700]
+})
+
+feb = pd.DataFrame({
+    "name": ["Kumar", "Anu"],
+    "amount": [600, 800]
+})
+
+=====
+
+Use:
+
+result = pd.concat([jan, feb])
+
+Result:
+
+|    | name    | amount |
+| -: | ------- | -----: |
+|  0 | Sugumar |    500 |
+|  1 | Ravi    |    700 |
+|  0 | Kumar   |    600 |
+|  1 | Anu     |    800 |
+
+
+It stacks one DataFrame below another.
+
+===
+
+Usually, reset the index:
+
+result = pd.concat([jan, feb], ignore_index=True)
+
+Result:
+
+|    | name    | amount |
+| -: | ------- | -----: |
+|  0 | Sugumar |    500 |
+|  1 | Ravi    |    700 |
+|  2 | Kumar   |    600 |
+|  3 | Anu     |    800 |
+
+
+=====
+
+. Combine columns — axis=1
+
+Suppose:
+
+customers = pd.DataFrame({
+    "name": ["Sugumar", "Ravi"],
+})
+
+services = pd.DataFrame({
+    "service": ["Haircut", "Facial"],
+})
+
+====
+
+Use:
+
+result = pd.concat([customers, services], axis=1)
+
+Result:
+
+|    | name    | service |
+| -: | ------- | ------- |
+|  0 | Sugumar | Haircut |
+|  1 | Ravi    | Facial  |
+
+
+Here the DataFrames are placed side by side.
+
+=====
+
+
+Real-time beauty parlour example 💇‍♀️
+
+Imagine you maintain separate appointment DataFrames for two days.
+
+Monday
+monday = pd.DataFrame({
+    "customer": ["Anu", "Priya"],
+    "service": ["Facial", "Haircut"]
+})
+Tuesday
+tuesday = pd.DataFrame({
+    "customer": ["Divya", "Kavya"],
+    "service": ["Manicure", "Pedicure"]
+})
+
+Combine them:
+
+all_appointments = pd.concat(
+    [monday, tuesday],
+    ignore_index=True
+)
+
+Result:
+
+|    | customer | service  |
+| -: | -------- | -------- |
+|  0 | Anu      | Facial   |
+|  1 | Priya    | Haircut  |
+|  2 | Divya    | Manicure |
+|  3 | Kavya    | Pedicure |
+
+
+====
+
+merge() vs concat()
+
+This is important:
+
+pd.merge()
+    ↓
+Combine based on a COMMON KEY
+    ↓
+customer_id
+pd.concat()
+    ↓
+Stack/combine DataFrames
+    ↓
+Rows or Columns
+
+====
+
+🔗 merge() → join using a key
+📚 concat() → stack DataFrames
+
+====
+
+
+
