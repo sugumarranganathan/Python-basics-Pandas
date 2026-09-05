@@ -153,6 +153,18 @@ Rows or Columns
 | `axis=1` | ➡️ Across | **Columns** |
 
 
+====
+
+For your pd.concat():
+
+# Add rows
+pd.concat([df1, df2], axis=0)
+
+# Add columns
+pd.concat([df1, df2], axis=1)
+
+=====
+
 =====
 
 
