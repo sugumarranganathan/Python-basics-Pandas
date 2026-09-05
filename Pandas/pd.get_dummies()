@@ -1,0 +1,105 @@
+pd.get_dummies() in Pandas
+
+pd.get_dummies() is used to convert categorical/text data into numbers.
+
+This is called One-Hot Encoding.
+
+Why do we need it?
+
+Machine Learning models generally work with numbers, not text.
+
+Suppose we have:
+----------------
+
+import pandas as pd
+
+df = pd.DataFrame({
+    "name": ["Anu", "Ravi", "Kumar"],
+    "service": ["Facial", "Haircut", "Facial"]
+})
+
+=======
+
+Our service column contains text:
+
+| name  | service |
+| ----- | ------- |
+| Anu   | Facial  |
+| Ravi  | Haircut |
+| Kumar | Facial  |
+
+
+====
+
+A machine-learning model cannot directly use "Facial" and "Haircut" as numerical features.
+
+So:
+
+pd.get_dummies(df["service"])
+
+===
+
+gives:
+
+| Facial | Haircut |
+| -----: | ------: |
+|   True |   False |
+|  False |    True |
+|   True |   False |
+
+
+====
+
+You can also get 0 and 1:
+
+pd.get_dummies(df["service"], dtype=int)
+
+Result:
+
+| Facial | Haircut |
+| -----: | ------: |
+|      1 |       0 |
+|      0 |       1 |
+|      1 |       0 |
+
+
+====
+💇 Real-time beauty parlour example
+
+Suppose:
+
+df = pd.DataFrame({
+    "customer": ["Anu", "Priya", "Divya", "Kavya"],
+    "service": ["Facial", "Haircut", "Manicure", "Facial"]
+})
+
+Apply:
+
+df = pd.get_dummies(df, columns=["service"], dtype=int)
+
+Result:
+
+| customer | service_Facial | service_Haircut | service_Manicure |
+| -------- | -------------: | --------------: | ---------------: |
+| Anu      |              1 |               0 |                0 |
+| Priya    |              0 |               1 |                0 |
+| Divya    |              0 |               0 |                1 |
+| Kavya    |              1 |               0 |                0 |
+
+Now the categorical service has been converted into numerical columns.
+===
+
+Text/Categorical
+       ↓
+pd.get_dummies()
+       ↓
+0 and 1
+       ↓
+Machine Learning
+
+So:
+
+pd.get_dummies() = Convert categorical values into separate 0/1 columns (One-Hot Encoding).
+
+=====
+
