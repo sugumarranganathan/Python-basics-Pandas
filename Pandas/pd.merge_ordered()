@@ -1,0 +1,87 @@
+pd.merge_ordered()
+
+is different from:
+
+pd.merge()
+pd.merge_ordered()
+
+merge_ordered() is used to merge two DataFrames while keeping the result ordered, especially useful for time-series data.
+
+===
+
+Example
+import pandas as pd
+
+df1 = pd.DataFrame({
+    "date": ["2024-01-01", "2024-01-03"],
+    "sales": [100, 150]
+})
+
+df2 = pd.DataFrame({
+    "date": ["2024-01-02", "2024-01-04"],
+    "price": [50, 60]
+})
+
+Now:
+
+result = pd.merge_ordered(df1, df2, on="date")
+
+Result:
+
+| date       | sales | price |
+| ---------- | ----: | ----: |
+| 2024-01-01 |   100 |   NaN |
+| 2024-01-02 |   NaN |    50 |
+| 2024-01-03 |   150 |   NaN |
+| 2024-01-04 |   NaN |    60 |
+
+
+Notice that the dates are automatically ordered.
+
+=====
+
+Simple difference
+
+pd.merge()
+     ↓
+Merge DataFrames
+     ↓
+Common key
+
+====
+
+pd.merge_ordered()
+     ↓
+Merge DataFrames
+     ↓
+Common key
+     ↓
+Keep result ordered
+     ↓
+Especially useful for dates/time-series
+
+====
+
+Real-world example
+
+For your appointment system, imagine:
+
+Appointments
+Date       Bookings
+01-09      5
+03-09      8
+
+Revenue
+Date       Revenue
+02-09      ₹2000
+04-09      ₹3000
+
+pd.merge_ordered() can combine them into a chronologically ordered timeline.
+
+======
+
+merge() → normal DataFrame merging
+merge_ordered() → merging + ordered result, particularly useful for time-series data
+
+
+
