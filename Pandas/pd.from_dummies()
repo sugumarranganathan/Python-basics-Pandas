@@ -1,0 +1,101 @@
+pd.from_dummies() in Pandas
+
+pd.from_dummies() does the opposite of pd.get_dummies().
+
+get_dummies() → categorical value → dummy columns
+------------
+
+
+from_dummies() → dummy columns → categorical value
+-------------
+
+
+Example
+
+First, create dummy columns:
+
+import pandas as pd
+
+df = pd.DataFrame({
+    "service": ["Facial", "Haircut", "Manicure", "Facial"]
+})
+
+dummy = pd.get_dummies(df["service"], dtype=int)
+
+print(dummy)
+
+Output:
+
+| Facial | Haircut | Manicure |
+| -----: | ------: | -------: |
+|      1 |       0 |        0 |
+|      0 |       1 |        0 |
+|      0 |       0 |        1 |
+|      1 |       0 |        0 |
+
+
+====
+
+Now convert them back:
+
+original = pd.from_dummies(dummy)
+
+Output:
+------
+
+|          |
+| -------- |
+| Facial   |
+| Haircut  |
+| Manicure |
+| Facial   |
+
+
+====
+
+💇 Beauty parlour example
+------------------------
+
+Original data
+     ↓
+"Facial"
+"Haircut"
+"Manicure"
+     ↓
+pd.get_dummies()
+     ↓
+Facial  Haircut  Manicure
+  1       0        0
+  0       1        0
+  0       0        1
+     ↓
+pd.from_dummies()
+     ↓
+"Facial"
+"Haircut"
+"Manicure"
+
+
+=====
+
+🧠 Easy memory
+pd.get_dummies()
+
+Encode → Text → 0/1
+
+pd.from_dummies()
+
+Decode → 0/1 → Text
+
+So simply remember:
+
+get_dummies() = Convert to dummy variables
+from_dummies() = Convert dummy variables back
+
+====
+
+
+
+
+
+
